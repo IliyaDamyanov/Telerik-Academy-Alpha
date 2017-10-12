@@ -1,0 +1,9 @@
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Probni\bin\Debug\Probni.exe.config
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Probni\bin\Debug\Probni.exe
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Probni\bin\Debug\Probni.pdb
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Probni\bin\Debug\PowerCollections.dll
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Probni\bin\Debug\PowerCollections.xml
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Probni\obj\Debug\Probni.csprojResolveAssemblyReference.cache
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Probni\obj\Debug\Probni.csproj.CoreCompileInputs.cache
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Probni\obj\Debug\Probni.exe
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Probni\obj\Debug\Probni.pdb

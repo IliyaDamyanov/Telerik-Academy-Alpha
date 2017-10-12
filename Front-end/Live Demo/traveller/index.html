@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Traveller</title>
+        <link rel="stylesheet" href="traveller.css"></link>
+    </head>
+    <body>
+        <div>
+            Sample commands to execute:
+            <br />
+            createjourney sofia varna 400
+            <br />
+            createjourney plovdiv varna 200
+            <br />
+            listjourney
+            <br />
+            createjourney sofia silistra 450
+            <br />
+            listjourney
+        </div>
+        <div>
+            <input id="textInput" type="text" />
+        </div>
+        <div>
+            <input type="button" value="Execute" />
+        </div>
+        <div id="resultElement">
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="modelFactory.js"></script>
+        <script src="database.js"></script>
+        <script src="commands.js"></script>
+        <script src="commandProcessor.js"></script>
+        <script src="container.js"></script>
+        <script src="traveller.js"></script>
+    </body>
+</html>
