@@ -1,0 +1,7 @@
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Methods\02. Get largest number\bin\Debug\_02.Get_largest_number.exe.config
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Methods\02. Get largest number\bin\Debug\_02.Get_largest_number.exe
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Methods\02. Get largest number\bin\Debug\_02.Get_largest_number.pdb
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Methods\02. Get largest number\obj\Debug\02. Get largest number.csprojResolveAssemblyReference.cache
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Methods\02. Get largest number\obj\Debug\02. Get largest number.csproj.CoreCompileInputs.cache
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Methods\02. Get largest number\obj\Debug\_02.Get_largest_number.exe
+C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Methods\02. Get largest number\obj\Debug\_02.Get_largest_number.pdb

@@ -1,0 +1,57 @@
+﻿namespace Problem_2.Bank_accounts
+{
+    public abstract class Account
+    {
+        private Customer customer;
+        private decimal balance;
+        private double interestRate;
+
+        public Account(Customer customer, decimal balance, double interestRate)
+        {
+            this.Customer = customer;
+            this.Balance = balance;
+            this.InterestRate = interestRate;
+        }
+
+        public Customer Customer
+        {
+            get
+            {
+                return this.customer;
+            }
+            set
+            {
+                this.customer = value;
+            }
+        }
+
+        public decimal Balance
+        {
+            get
+            {
+                return this.balance;
+            }
+            set
+            {
+                this.balance = value;
+            }
+        }
+
+        public double InterestRate
+        {
+            get
+            {
+                return this.interestRate;
+            }
+            set
+            {
+                this.interestRate = value;
+            }
+        }
+
+        public virtual double CalculateInterestAmount(int months)
+        {
+            return months * this.InterestRate;
+        }
+    }
+}
