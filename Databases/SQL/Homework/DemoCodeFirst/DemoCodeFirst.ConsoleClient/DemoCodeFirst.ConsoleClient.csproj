@@ -61,9 +61,9 @@
       <Project>{21ed4005-256a-4252-b68f-af036ee1c6a4}</Project>
       <Name>DemoCodeFirst.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DemoCodeFirst\DemoCodeFirst.csproj">
+    <ProjectReference Include="..\DemoCodeFirst\DemoCodeFirst.Data.csproj">
       <Project>{313c04d8-e61d-465a-894b-5f9bece3b7b3}</Project>
-      <Name>DemoCodeFirst</Name>
+      <Name>DemoCodeFirst.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DemoCodeFirst.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,14 +7,19 @@ using System.Threading.Tasks;
 
 namespace DemoCodeFirst.ConsoleClient
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            var db = new StudentSystemContext();
+            var ctx = new StudentSystemContext();
 
-            Console.WriteLine(db.Students.Count());
-            //db.Students.Add()
+            ctx.Students.Add(new Student()
+            {
+                FirstName = "Ivan",
+                LastName = "A"
+            });
+
+            ctx.SaveChanges();
         }
     }
 }

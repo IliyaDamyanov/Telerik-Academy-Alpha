@@ -1,4 +1,5 @@
-﻿using DemoCodeFirst.Models;
+﻿using DemoCodeFirst.Migrations;
+using DemoCodeFirst.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -13,7 +14,8 @@ namespace DemoCodeFirst
         public StudentSystemContext()
             : base("name=StudentSystem")
         {
-
+            //var strategy = new MigrateDatabaseToLatestVersion<StudentSystemContext, Configuration>();
+            //Database.SetInitializer(strategy);
         }
 
         public DbSet<Student> Students { get; set; }

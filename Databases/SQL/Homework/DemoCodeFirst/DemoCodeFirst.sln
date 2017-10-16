@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCodeFirst", "DemoCodeFirst\DemoCodeFirst.csproj", "{313C04D8-E61D-465A-894B-5F9BECE3B7B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCodeFirst.Data", "DemoCodeFirst\DemoCodeFirst.Data.csproj", "{313C04D8-E61D-465A-894B-5F9BECE3B7B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCodeFirst.Models", "DemoCodeFirst.Models\DemoCodeFirst.Models.csproj", "{21ED4005-256A-4252-B68F-AF036EE1C6A4}"
 EndProject
