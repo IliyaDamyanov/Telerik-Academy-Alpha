@@ -13,8 +13,8 @@ namespace Traveller.Core.Contracts
 
         IVehicle CreateTrain(int passengerCapacity, decimal pricePerKilometer, int carts);
 
-        IJourney CreateJourney(string startingLocation, string destination, int distance, IVehicle vehicle);
+        Journey CreateJourney(string startingLocation, string destination, int distance, IVehicle vehicle);
 
-        ITicket CreateTicket(IJourney journey, decimal administrativeCosts);
+        ITicket CreateTicket(Journey journey, decimal administrativeCosts);
     }
 }

@@ -17,11 +17,34 @@ namespace Traveller
 
             using (var context = new TravellerContext())
             {
-                Ticket ticket = new Ticket();
-                ticket.AdministrativeCosts = 200;
+                //    var tickets = context.Tickets.ToList();
+                //    System.Console.WriteLine(string.Join("\n", tickets.Select(t => t.AdministrativeCosts)));
 
-                context.Tickets.Add(ticket);
-                context.SaveChanges();
+                //Journey journey = new Journey();
+                //journey.StartLocation = "Sofiq";
+                //journey.Destination = "Silistra";
+                //journey.Distance = 5400;
+
+                //try
+                //{
+                //    context.Journeys.Add(journey);
+                //    context.SaveChanges();
+                //}
+                //catch 
+                //{
+
+                //}
+
+                //Ticket ticket = new Ticket();
+                //ticket.AdministrativeCosts = 1400;
+                //ticket.Journey = journey;
+
+                //context.Tickets.Add(ticket);
+                //context.SaveChanges();
+
+                var ticket = context.Tickets.ToList().First();
+                System.Console.WriteLine(ticket.Journey);
+                //context.SaveChanges();
             }
 
             //IKernel kernel = new StandardKernel(new TravellerModule());

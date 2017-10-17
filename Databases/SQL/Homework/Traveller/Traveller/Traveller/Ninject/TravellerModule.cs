@@ -7,6 +7,7 @@ using Traveller.Core.Contracts;
 using Traveller.Core.Decorators;
 using Traveller.Core.Factories;
 using Traveller.Core.Providers;
+using Traveller.Data;
 
 namespace Traveller.Ninject
 {
@@ -14,6 +15,7 @@ namespace Traveller.Ninject
     {
         public override void Load()
         {
+            this.Bind<ITravellerContext>().To<ITravellerContext>();
             this.Bind<IReader>().To<ConsoleReader>();
             this.Bind<IWriter>().To<ConsoleWriter>();
             this.Bind<IParser>().To<CommandParser>();

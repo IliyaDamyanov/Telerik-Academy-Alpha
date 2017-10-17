@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Traveller.Commands.Contracts;
 using Traveller.Core.Contracts;
 using Traveller.Core.Providers;
+using Traveller.Data;
 using Traveller.Models;
 using Traveller.Models.Abstractions;
 
@@ -25,7 +26,7 @@ namespace Traveller.Commands.Creating
 
         public string Execute(IList<string> parameters)
         {
-            IJourney journey;
+            Journey journey;
             decimal administrativeCosts;
 
             try

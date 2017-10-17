@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using Traveller.Models.Abstractions;
 using Traveller.Models.Vehicles.Abstractions;
@@ -12,6 +14,11 @@ namespace Traveller.Models
         private string destination;
         private int distance;
 
+        public Journey()
+        {
+
+        }
+
         public Journey(string startingLocation, string destination, int distance, IVehicle vehicle)
         {
             this.StartLocation = startingLocation;
@@ -20,57 +27,32 @@ namespace Traveller.Models
             this.Vehicle = vehicle;
         }
 
+        public int Id { get; set; }
+
+        [Required]
+        [StringLength(25,MinimumLength =5, ErrorMessage = "The StartingLocation's length cannot be less than 5 or more than 25 symbols long.")]
         public string StartLocation
         {
-            get
-            {
-                return this.startingLocation;
-            }
-            private set
-            {
-                if (value.Length < 5 || value.Length > 25)
-                {
-                    throw new ArgumentOutOfRangeException("The StartingLocation's length cannot be less than 5 or more than 25 symbols long.");
-                }
-
-                this.startingLocation = value;
-            }
+            get;
+            set;
         }
 
+        [Required]
+        [StringLength(25, MinimumLength = 5, ErrorMessage = "The Destination's length cannot be less than 5 or more than 25 symbols long.")]
         public string Destination
         {
-            get
-            {
-                return this.destination;
-            }
-            private set
-            {
-                if (value.Length < 5 || value.Length > 25)
-                {
-                    throw new ArgumentOutOfRangeException("The Destination's length cannot be less than 5 or more than 25 symbols long.");
-                }
-
-                this.destination = value;
-            }
+            get;
+            set;
         }
 
+        [Range(5,5000,ErrorMessage = "The Distance cannot be less than 5 or more than 5000 kilometers.")]
         public int Distance
         {
-            get
-            {
-                return this.distance;
-            }
-            private set
-            {
-                if (value < 5 || value > 5000)
-                {
-                    throw new ArgumentOutOfRangeException("The Distance cannot be less than 5 or more than 5000 kilometers.");
-                }
-
-                this.distance = value;
-            }
+            get;
+            set;
         }
 
+        [NotMapped]
         public IVehicle Vehicle { get; private set; }
 
         public decimal CalculateTravelCosts()

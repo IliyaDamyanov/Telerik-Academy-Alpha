@@ -8,7 +8,7 @@ using Traveller.Models;
 
 namespace Traveller.Data
 {
-    public class TravellerContext : DbContext
+    public class TravellerContext : DbContext, ITravellerContext
     {
         public TravellerContext ()
             : base("TravellerConnection")
@@ -16,5 +16,8 @@ namespace Traveller.Data
         }
 
         public IDbSet<Ticket> Tickets { get; set; }
+
+
+        public IDbSet<Journey> Journeys { get; set; }
     }
 }

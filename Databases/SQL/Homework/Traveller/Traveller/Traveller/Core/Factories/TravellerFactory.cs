@@ -23,12 +23,12 @@ namespace Traveller.Core.Factories
             return new Train(passengerCapacity, pricePerKilometer, carts);
         }
         
-        public IJourney CreateJourney(string startLocation, string destination, int distance, IVehicle vehicle)
+        public Journey CreateJourney(string startLocation, string destination, int distance, IVehicle vehicle)
         {
             return new Journey(startLocation, destination, distance, vehicle);
         }
 
-        public ITicket CreateTicket(IJourney journey, decimal administrativeCosts)
+        public ITicket CreateTicket(Journey journey, decimal administrativeCosts)
         {
             return new Ticket(journey, administrativeCosts);
         }

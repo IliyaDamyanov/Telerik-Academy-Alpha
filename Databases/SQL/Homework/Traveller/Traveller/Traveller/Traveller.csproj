@@ -82,10 +82,27 @@
     <Compile Include="Core\Providers\IParser.cs" />
     <Compile Include="Core\Providers\IReader.cs" />
     <Compile Include="Core\Providers\IWriter.cs" />
+    <Compile Include="Data\ITravellerContext.cs" />
     <Compile Include="Data\TravellerContext.cs" />
     <Compile Include="Migrations\201710160746569_Ticket initial.cs" />
     <Compile Include="Migrations\201710160746569_Ticket initial.Designer.cs">
       <DependentUpon>201710160746569_Ticket initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710162039379_Jorney initial.cs" />
+    <Compile Include="Migrations\201710162039379_Jorney initial.Designer.cs">
+      <DependentUpon>201710162039379_Jorney initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710162056340_Required for Journey.cs" />
+    <Compile Include="Migrations\201710162056340_Required for Journey.Designer.cs">
+      <DependentUpon>201710162056340_Required for Journey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710162356045_asd.cs" />
+    <Compile Include="Migrations\201710162356045_asd.Designer.cs">
+      <DependentUpon>201710162356045_asd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710170921117_journeys.cs" />
+    <Compile Include="Migrations\201710170921117_journeys.Designer.cs">
+      <DependentUpon>201710170921117_journeys.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abstractions\IJourney.cs" />
@@ -109,6 +126,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710160746569_Ticket initial.resx">
       <DependentUpon>201710160746569_Ticket initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710162039379_Jorney initial.resx">
+      <DependentUpon>201710162039379_Jorney initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710162056340_Required for Journey.resx">
+      <DependentUpon>201710162056340_Required for Journey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710162356045_asd.resx">
+      <DependentUpon>201710162356045_asd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710170921117_journeys.resx">
+      <DependentUpon>201710170921117_journeys.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

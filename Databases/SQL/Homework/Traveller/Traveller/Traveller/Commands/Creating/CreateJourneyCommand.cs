@@ -4,22 +4,26 @@ using System.Collections.Generic;
 using Traveller.Commands.Contracts;
 using Traveller.Core.Contracts;
 using Traveller.Core.Providers;
+using Traveller.Data;
 using Traveller.Models.Vehicles.Abstractions;
 
 namespace Traveller.Commands.Creating
 {
     public class CreateJourneyCommand : ICommand
     {
+        private readonly ITravellerContext context;
         private readonly IDatabase database;
         private readonly ITravellerFactory factory;
 
-        public CreateJourneyCommand(IDatabase database, ITravellerFactory factory)
+        public CreateJourneyCommand(ITravellerContext context, IDatabase database, ITravellerFactory factory)
         {
+            Guard.WhenArgument(context, "context").IsNull().Throw();
             Guard.WhenArgument(database, "database").IsNull().Throw();
             Guard.WhenArgument(factory, "factory").IsNull().Throw();
 
             this.database = database;
             this.factory = factory;
+            this.context = context;
         }
 
         public string Execute(IList<string> parameters)
@@ -43,6 +47,15 @@ namespace Traveller.Commands.Creating
 
             var journey = this.factory.CreateJourney(startLocation, destination, distance, vehicle);
             this.database.Journeys.Add(journey);
+
+            //using (TravellerContext context = new TravellerContext())
+            //{
+            //    context.Journeys.Add(journey);
+            //    context.SaveChanges();
+            //}
+
+            this.context.Journeys.Add(journey);
+            this.context.SaveChanges();
 
             return $"Journey with ID {this.database.Journeys.Count - 1} was created.";
         }

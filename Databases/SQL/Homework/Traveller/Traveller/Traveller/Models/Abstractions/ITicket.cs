@@ -2,7 +2,7 @@
 {
     public interface ITicket
     {
-        IJourney Journey { get; }
+        Journey Journey { get; }
 
         decimal AdministrativeCosts { get; }
 

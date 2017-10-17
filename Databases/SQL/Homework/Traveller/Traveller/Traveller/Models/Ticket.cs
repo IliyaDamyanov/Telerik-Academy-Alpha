@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using Traveller.Models.Abstractions;
 
@@ -6,12 +9,14 @@ namespace Traveller.Models
 {
     public class Ticket : ITicket
     {
+        private ICollection<Journey> journeys;
+
         public Ticket()
         {
-
+            this.journeys = new HashSet<Journey>();
         }
 
-        public Ticket(IJourney journey, decimal administrativeCosts)
+        public Ticket(Journey journey, decimal administrativeCosts)
         {
             this.Journey = journey;
             this.AdministrativeCosts = administrativeCosts;
@@ -19,9 +24,23 @@ namespace Traveller.Models
 
         public int Id { get; set; }
 
-        [NotMapped]
-        public IJourney Journey { get; private set; }
+        public int? JourneyId { get; set; }
+        
+        public virtual Journey Journey { get; set; }
 
+        public virtual ICollection<Journey> Journeys
+        {
+            get
+            {
+                return this.journeys;
+            }
+            set
+            {
+                this.journeys = value;
+            }
+        }
+
+        [Range(0,1000)]
         public decimal AdministrativeCosts { get; set; }
 
         public decimal CalculatePrice()
