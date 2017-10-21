@@ -1,9 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Validators;
-using Validators.Exceptions;
-
-namespace ValidatorsTests
+﻿namespace ValidatorsTests
 {
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Validators;
+    using Validators.Exceptions;
+
     [TestClass]
     public class UsernameValidatorTests
     {
@@ -61,7 +61,10 @@ namespace ValidatorsTests
             var expectedResult = true;
 
             // Act
-            var actualResult = usernameValidator.IsUsernameValid(usernameToBeValidated, minRequiredUsernameLength, maxRequiredUsernameLength);
+            var actualResult = usernameValidator.IsUsernameValid(
+                usernameToBeValidated, 
+                minRequiredUsernameLength, 
+                maxRequiredUsernameLength);
 
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -79,7 +82,10 @@ namespace ValidatorsTests
             var maxRequiredUsernameLength = 32;
 
             // Act
-            usernameValidator.IsUsernameValid(usernameToBeValidated, minRequiredUsernameLength, maxRequiredUsernameLength);
+            usernameValidator.IsUsernameValid(
+                usernameToBeValidated,
+                minRequiredUsernameLength,
+                maxRequiredUsernameLength);
 
             // In this test method, the "ExpectedException" attribute is our "Assertion"
         }
@@ -96,7 +102,10 @@ namespace ValidatorsTests
             var maxRequiredUsernameLength = 32;
 
             // Act
-            usernameValidator.IsUsernameValid(usernameToBeValidated, minRequiredUsernameLength, maxRequiredUsernameLength);
+            usernameValidator.IsUsernameValid(
+                usernameToBeValidated,
+                minRequiredUsernameLength,
+                maxRequiredUsernameLength);
 
             // In this test method, the "ExpectedException" attribute is our "Assertion"
         }

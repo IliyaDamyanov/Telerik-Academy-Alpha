@@ -8,8 +8,14 @@
 
     public class PasswordValidator
     {
-        public bool IsPasswordValid(string password, int minRequiredPasswordLength, int maxRequiredPasswordLength, int minRequiredDigitsCount,
-            int minRequiredLowercaseLettersCount, int minRequiredUppercaseLettersCount, int minRequiredSpecialCharactersCount)
+        public bool IsPasswordValid(
+            string password,
+            int minRequiredPasswordLength,
+            int maxRequiredPasswordLength,
+            int minRequiredDigitsCount,
+            int minRequiredLowercaseLettersCount,
+            int minRequiredUppercaseLettersCount,
+            int minRequiredSpecialCharactersCount)
         {
             if (!this.IsPasswordLengthValid(password, minRequiredPasswordLength, maxRequiredPasswordLength))
             {

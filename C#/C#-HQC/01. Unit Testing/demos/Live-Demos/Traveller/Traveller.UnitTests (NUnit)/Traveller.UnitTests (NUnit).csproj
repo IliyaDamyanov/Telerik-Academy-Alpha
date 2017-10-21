@@ -57,9 +57,9 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\C#-OOP\Telerik Academy_Skeleton\Academy\Academy.csproj">
+    <ProjectReference Include="..\Traveller\Traveller.csproj">
       <Project>{37BA7D68-D803-4820-9586-8EFC016C9144}</Project>
-      <Name>Academy</Name>
+      <Name>Traveller</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

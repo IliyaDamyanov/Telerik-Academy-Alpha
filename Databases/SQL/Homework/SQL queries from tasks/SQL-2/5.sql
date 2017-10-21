@@ -1,0 +1,1 @@
+SELECT AVG(e.Salary) FROM Employees e, Departments d WHERE e.DepartmentID = (SELECT d.DepartmentID WHERE d.Name= 'Sales')

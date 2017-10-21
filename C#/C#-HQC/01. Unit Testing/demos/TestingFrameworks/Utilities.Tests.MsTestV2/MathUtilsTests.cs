@@ -1,8 +1,9 @@
-﻿/*
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Utilities.Tests.MsTestV2
 {
@@ -43,10 +44,10 @@ namespace Utilities.Tests.MsTestV2
         }
 
 
-        //[DataTestMethod]
-        //[DataRow("1,1", 2)]
-        //[DataRow("",0)]
-        //[DataRow("-1", -1)]
+        [DataTestMethod]
+        [DataRow("1,1", 2)]
+        [DataRow("",0)]
+        [DataRow("-1", -1)]
         public void V2_MathUtils_MultipleCases_ShouldReturnRightResult(string arr, int expected)
         {
             var util = new MathUtils();
@@ -67,4 +68,3 @@ namespace Utilities.Tests.MsTestV2
         }
     }
 }
-*/

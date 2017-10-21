@@ -2,9 +2,9 @@ using System;
 
 public class Account
 {
-	private decimal balance = 0;
+	private float balance = 0;
 	
-	public void Deposit(decimal amount)
+	public void Deposit(float amount)
 	{
 		if (amount == 0)
 		{
@@ -13,16 +13,16 @@ public class Account
 		balance += amount;
 	}
 
-	public void Withdraw(decimal amount)
+	public void Withdraw(float amount)
 	{
 		if (amount == 0)
 		{
-			throw new ArgumentException("Can not withdraw ammount of 0.00");
+			throw new ArgumentException("Can not withdrwa ammount of 0.00");
 		}
 		balance -= amount;
 	}
 
-	public void TransferFunds(Account destinationAcc, decimal amount)
+	public void TransferFunds(Account destinationAcc, float amount)
 	{
 		if (destinationAcc == this)
 		{
@@ -33,7 +33,7 @@ public class Account
 		destinationAcc.balance += amount;
 	}
 
-	public decimal Balance
+	public float Balance
 	{
 		get
 		{

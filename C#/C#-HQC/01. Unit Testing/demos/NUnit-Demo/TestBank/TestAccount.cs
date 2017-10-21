@@ -8,8 +8,8 @@ public class TestAccount
 	public void TestDeposit()
 	{
 		Account acc = new Account();
-		acc.Deposit(200.00m);
-		decimal balance = acc.Balance;
+		acc.Deposit(200.00F);
+		float balance = acc.Balance;
 		Assert.AreEqual(balance, 200F);
 	}
 
@@ -25,8 +25,8 @@ public class TestAccount
 	public void TestDepositNegative()
 	{
 		Account acc = new Account();
-		acc.Deposit(-150.30m);
-        decimal balance = acc.Balance;
+		acc.Deposit(-150.30F);
+		float balance = acc.Balance;
 		Assert.AreEqual(balance, -150.30F);
 	}
 
@@ -34,8 +34,8 @@ public class TestAccount
 	public void TestWithdraw()
 	{
 		Account acc = new Account();
-		acc.Withdraw(138.56m);
-		decimal balance = acc.Balance;
+		acc.Withdraw(138.56F);
+		float balance = acc.Balance;
 		Assert.AreEqual(balance, -138.56F);
 	}
 
@@ -51,8 +51,8 @@ public class TestAccount
 	public void TestWithdrawNegative()
 	{
 		Account acc = new Account();
-		acc.Withdraw(-3.14m);
-        decimal balance = acc.Balance;
+		acc.Withdraw(-3.14F);
+		float balance = acc.Balance;
 		Assert.AreEqual(balance, 1000F);
 	}
 
@@ -60,10 +60,10 @@ public class TestAccount
 	public void TestTransferFunds()
 	{
 		Account source = new Account();
-		source.Deposit(200.00m);
+		source.Deposit(200.00F);
 		Account dest = new Account();
-		dest.Deposit(150.00m);
-		source.TransferFunds(dest, 100.00m);
+		dest.Deposit(150.00F);
+		source.TransferFunds(dest, 100.00F);
 		Assert.AreEqual(250.00F, dest.Balance);
 		Assert.AreEqual(100.00F, source.Balance);
 	}
@@ -74,8 +74,8 @@ public class TestAccount
 	{
 		Account source = null;
 		Account dest = new Account();
-		dest.Deposit(200.00m);
-		source.TransferFunds(dest, 100.00m);
+		dest.Deposit(200.00F);
+		source.TransferFunds(dest, 100.00F);
 	}
 
 	[Test]
@@ -83,9 +83,9 @@ public class TestAccount
 	public void TestTransferFundsToNullAccount()
 	{
 		Account source = new Account();
-		source.Deposit(200.00m);
+		source.Deposit(200.00F);
 		Account dest = null;
-		source.TransferFunds(dest, 100.00m);
+		source.TransferFunds(dest, 100.00F);
 	}
 
 	[Test]
@@ -93,23 +93,23 @@ public class TestAccount
 	public void TestTransferFundsSameAccount()
 	{
 		Account source = new Account();
-		source.Deposit(200.00m);
+		source.Deposit(200.00F);
 		Account dest = source;
-		source.TransferFunds(dest, 100.00m);
+		source.TransferFunds(dest, 100.00F);
 	}
 
 	[Test]
 	public void TestDepositWithdrawTransferFunds()
 	{
 		Account source = new Account();
-		source.Deposit(200.00m);
-		source.Withdraw(100.00m);
+		source.Deposit(200.00F);
+		source.Withdraw(100.00F);
 
 		Account dest = new Account();
-		dest.Deposit(150.00m);
-		dest.Withdraw(50.00m);
+		dest.Deposit(150.00F);
+		dest.Withdraw(50.00F);
 
-		source.TransferFunds(dest, 100.00m);
+		source.TransferFunds(dest, 100.00F);
 		Assert.AreEqual(0.00F, source.Balance);
 		Assert.AreEqual(200.00F, dest.Balance);
 	}

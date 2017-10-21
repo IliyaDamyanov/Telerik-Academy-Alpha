@@ -13,7 +13,8 @@ namespace Traveller.UnitTests.Commands.Creating.CreateAirplaneCommandTests
     [TestClass]
     public class Execute_Should
     {
-        private const string SuccessMessageTemplate = "Vehicle with ID {0} was created.";
+        private const string SuccessMessageTemplate = 
+            "Vehicle with ID {0} was created.";
 
         [TestMethod]
         public void ReturnSuccessMessage_WhenParametersAreCorrect()
@@ -25,7 +26,8 @@ namespace Traveller.UnitTests.Commands.Creating.CreateAirplaneCommandTests
             parameters.Add("true");
 
             string result = string.Format(SuccessMessageTemplate, 0);
-            CreateAirplaneCommand command = new CreateAirplaneCommand(TravellerFactory.Instance, Engine.Instance);
+            CreateAirplaneCommand command = 
+                new CreateAirplaneCommand(TravellerFactory.Instance, Engine.Instance);
 
             // Act
             string actualResult = command.Execute(parameters);

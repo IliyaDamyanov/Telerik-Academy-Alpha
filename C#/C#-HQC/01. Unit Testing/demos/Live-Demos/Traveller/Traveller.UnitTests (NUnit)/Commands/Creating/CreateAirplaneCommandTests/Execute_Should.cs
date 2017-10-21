@@ -13,7 +13,8 @@ namespace Traveller.UnitTests.Commands.Creating.CreateAirplaneCommandTests
     [TestFixture]
     public class Execute_Should
     {
-        private const string SuccessMessageTemplate = "Vehicle with ID {0} was created.";
+        private const string SuccessMessageTemplate = 
+            "Vehicle with ID {0} was created.";
 
         [Test]
         public void ReturnSuccessMessage_WhenParametersAreCorrect()

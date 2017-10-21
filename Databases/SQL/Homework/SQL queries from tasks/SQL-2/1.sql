@@ -1,0 +1,1 @@
+SELECT e.FirstName, e.MiddleName, e.LastName, e.Salary FROM Employees e WHERE e.Salary = (SELECT MIN(em.Salary) FROM Employees em)

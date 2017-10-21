@@ -1,0 +1,1 @@
+SELECT e.FirstName,e.MiddleName,e.LastName,e.Salary FROM Employees e WHERE e.Salary BETWEEN (SELECT MIN(em.Salary) FROM Employees em) AND (SELECT MIN(em.Salary)+MIN(em.Salary)*0.1  FROM Employees em)

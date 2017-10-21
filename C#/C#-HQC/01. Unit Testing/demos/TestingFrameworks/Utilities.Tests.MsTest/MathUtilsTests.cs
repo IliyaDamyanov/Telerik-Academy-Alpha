@@ -1,8 +1,10 @@
-﻿/*
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MSTestExtensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Utilities.Tests.MsTest
 {
@@ -95,8 +97,7 @@ namespace Utilities.Tests.MsTest
             var util = new MathUtils();
             List<int> numbers = null;
 
-            Assert.ThrowsException<ArgumentNullException>(() => util.Sum(numbers));
+            ThrowsAssert.Throws<ArgumentNullException>(() => util.Sum(numbers));
         }
     }
 }
-*/

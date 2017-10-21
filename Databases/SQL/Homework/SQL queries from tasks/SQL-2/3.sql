@@ -1,0 +1,1 @@
+SELECT e.FirstName, e.MiddleName, e.LastName, e.Salary, d.Name FROM Employees e, Departments d WHERE e.Salary = (SELECT MIN(em.Salary) FROM Employees em WHERE e.DepartmentID = d.DepartmentID)

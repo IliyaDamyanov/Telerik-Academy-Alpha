@@ -55,9 +55,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\C#-OOP\Telerik Academy_Skeleton\Academy\Academy.csproj">
+    <ProjectReference Include="..\Traveller\Traveller.csproj">
       <Project>{37ba7d68-d803-4820-9586-8efc016c9144}</Project>
-      <Name>Academy</Name>
+      <Name>Traveller</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
