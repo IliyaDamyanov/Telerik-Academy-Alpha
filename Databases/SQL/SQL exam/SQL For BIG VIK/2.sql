@@ -1,0 +1,1 @@
+SELECT TOP(5) p.ProductName, s.CompanyName FROM Products p INNER JOIN Suppliers s ON p.SupplierID = s.SupplierID  ORDER BY p.ProductName ASC
