@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace ExerciseFromVideos.Controllers
 {
@@ -13,14 +14,15 @@ namespace ExerciseFromVideos.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            return this.View();
         }
 
         public ActionResult About()
         {
-            return Content("Page about the users.");
+            return this.Content("Page about the users.");
         }
 
+        //nai-dobre e Action metoda da vryshta ActionResult
         public string StringMethod(int? firstNumber= 0,int secondNumber = 0,string name="")
         {
             return $"{name} is {firstNumber+secondNumber} years old.";
@@ -28,7 +30,14 @@ namespace ExerciseFromVideos.Controllers
 
         public ActionResult DateTime(int? day, int? month, int? year)
         {
-            return Content($"The date you entered is {day}.{month}.{year}");
+            var route = (Route)this.RouteData.Values["EnteredDate"];
+
+            return this.Content($"The date you entered is {day}.{month}.{year}");
+        }
+
+        public ActionResult EmptyResult()
+        {
+            return new EmptyResult();
         }
     }
 }

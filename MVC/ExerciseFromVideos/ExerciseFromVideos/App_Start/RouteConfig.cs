@@ -39,7 +39,8 @@ namespace ExerciseFromVideos
             routes.MapRoute(
                 name: "EnteredDate",
                 url: "{day}/{month}/{year}",
-                defaults: new { controller = "Users", action = "DateTime" });
+                defaults: new { controller = "Users", action = "DateTime" },
+                constraints: new { day=@"\d{2}", month=@"\d{2}", year =@"\d{4}"});
 
             routes.MapRoute(
                 name: "ActionResultStringMethod",
