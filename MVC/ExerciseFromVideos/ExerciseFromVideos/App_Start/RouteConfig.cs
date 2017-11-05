@@ -11,10 +11,10 @@ namespace ExerciseFromVideos
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.IgnoreRoute("{resource}.academy/{*pathInfo}"); // ne obrabotva link sys academy v nego
+            //routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            //routes.IgnoreRoute("{resource}.academy/{*pathInfo}"); // ne obrabotva link sys academy v nego
 
-            routes.LowercaseUrls = true;
+            //routes.LowercaseUrls = true;
 
             //routes.MapRoute(
             //    name: "ProbenTochen",
@@ -35,6 +35,8 @@ namespace ExerciseFromVideos
             //    name: "ProbenControllerVSredataIVNachaloto",
             //    url: "{action}/tochenadress/trqbvadavlezne/{controller}/neshto",
             //    defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional });
+
+            //---------------------------------------------------------------------------------------------
 
             routes.MapRoute(
                 name: "EnteredDate",

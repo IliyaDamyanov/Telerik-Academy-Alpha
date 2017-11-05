@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -12,7 +13,7 @@ namespace ExerciseFromVideos.Controllers
         // GET: AjaxDemo
         public ActionResult Index()
         {
-            return this.View();
+            return this.View(); 
         }
 
         public ActionResult AjaxTest()
@@ -42,7 +43,8 @@ namespace ExerciseFromVideos.Controllers
         public JsonResult AllBooks()
         {
             var books = new List<string>() { "book1", "book2", "book3" };
-            return this.Json(books, JsonRequestBehavior.AllowGet);
+            return this.Json(books, JsonRequestBehavior.AllowGet); //trqbva da se pozvoli get-vaneto na json-a
+            //moje i return this.Json("{ 'name':'gosho'}")
         }
 
     }
