@@ -18,6 +18,8 @@ namespace ExerciseFromVideos
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new RazorViewEngine());
+
+            //RouteTable.Routes.MapHubs(); tova e po stariq nachin sys SignalR v1
         }
     }
 }

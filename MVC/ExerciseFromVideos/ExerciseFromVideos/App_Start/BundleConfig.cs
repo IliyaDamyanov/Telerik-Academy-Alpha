@@ -15,6 +15,9 @@ namespace ExerciseFromVideos
                         "~/Scripts/jquery.validate*")); // zvezdichkata oznachava vsichki znaci sled tova, demek ako ima fail na koito imeto
             //zapochva taka i toi shte se vkliuchi
 
+            bundles.Add(new ScriptBundle("~/bundles/signalR").Include(
+                        "~/Scripts/jquery.signalR-{version}.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryajax").Include(
                         "~/Scripts/jquery.unobtrusive-ajax.js"));
 
