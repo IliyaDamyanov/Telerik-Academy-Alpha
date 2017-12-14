@@ -13,8 +13,7 @@ public static class DirectoryTraverserBFS
     /// <param name="directoryPath">the path to the directory /// which should be traversed</param>
     public static void TraverseDir(string directoryPath)
     {
-        Queue<DirectoryInfo> visitedDirsQueue =
-        new Queue<DirectoryInfo>();
+        Queue<DirectoryInfo> visitedDirsQueue = new Queue<DirectoryInfo>();
         visitedDirsQueue.Enqueue(new DirectoryInfo(directoryPath));
         while (visitedDirsQueue.Count > 0)
         {
