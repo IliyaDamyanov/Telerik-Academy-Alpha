@@ -1,6 +1,4 @@
 ﻿using Dealership.Engine;
-using Dealership.Models;
-using System;
 
 namespace Dealership
 {

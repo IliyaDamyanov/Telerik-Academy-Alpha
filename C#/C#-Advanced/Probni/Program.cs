@@ -28,7 +28,24 @@ namespace Probni
     {
         public static void Main()
         {
-            
+            string exampleString = "Hello Extension Methods";
+            string abc = Method(exampleString);
+            int wordsInString = Method(exampleString).WordCount();
+            Console.WriteLine(wordsInString);
+        }
+
+        public static string Method(string str)
+        {
+            return str + " abc";
+        }
+    }
+
+    public static class Extensions
+    {
+        public static int WordCount(this string str)
+        {
+            return str.Split(new char[] { ' ', '.', '?' },
+            StringSplitOptions.RemoveEmptyEntries).Length;
         }
     }
 }

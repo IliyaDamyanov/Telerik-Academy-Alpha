@@ -1,7 +1,7 @@
-﻿using Dealership.Common.Enums;
-
-namespace Dealership.Contracts
+﻿namespace Dealership.Contracts
 {
+    using Dealership.Common.Enums;
+
     public interface IVehicle : ICommentable, IPriceable
     {
         int Wheels { get; }

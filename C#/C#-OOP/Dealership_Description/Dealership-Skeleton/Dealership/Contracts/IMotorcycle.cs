@@ -1,6 +1,6 @@
 ﻿namespace Dealership.Contracts
 {
-    public interface IMotorcycle : IVehicle
+    public interface IMotorcycle
     {
         string Category { get; }
     }

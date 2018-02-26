@@ -1,6 +1,6 @@
 ﻿namespace Dealership.Contracts
 {
-    public interface ICar : IVehicle
+    public interface ICar
     {
         int Seats { get; }
     }

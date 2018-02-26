@@ -1,8 +1,7 @@
-﻿using System;
-using System.Text.RegularExpressions;
-
-namespace Dealership.Common
+﻿namespace Dealership.Common
 {
+    using System;
+    using System.Text.RegularExpressions;
 
     public static class Validator
     {
