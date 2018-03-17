@@ -1,4 +1,4 @@
-﻿/*
+﻿
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
@@ -58,7 +58,6 @@ namespace Traveller.UnitTests.Commands.Creating.CreateAirplaneCommandTests
 
             // Act & Assert
             Assert.ThrowsException<ArgumentException>(() => command.Execute(parameters));
-        }      
+        }
     }
 }
-*/

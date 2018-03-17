@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using Traveller.Commands.Contracts;
 using Traveller.Core.Contracts;
@@ -8,8 +8,8 @@ namespace Traveller.Commands.Creating
     // TODO
     public class CreateAirplaneCommand : CreateVehicleCommand
     {
-        public CreateAirplaneCommand(ITravellerFactory factory,IEngine engine)
-            :base(factory,engine)
+        public CreateAirplaneCommand(ITravellerFactory factory, IEngine engine)
+            : base(factory, engine)
         {
         }
         public override string Execute(IList<string> parameters)
@@ -36,4 +36,3 @@ namespace Traveller.Commands.Creating
         }
     }
 }
-*/

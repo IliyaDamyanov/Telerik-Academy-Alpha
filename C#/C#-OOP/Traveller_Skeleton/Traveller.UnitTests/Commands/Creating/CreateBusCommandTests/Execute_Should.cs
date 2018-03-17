@@ -1,4 +1,4 @@
-﻿/*using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -70,7 +70,7 @@ namespace Traveller.UnitTests.Commands.Creating.CreateBusCommandTests
             List<IVehicle> vehicles = new List<IVehicle>();
             var engineMock = new Mock<IEngine>();
             engineMock.SetupGet(e => e.Vehicles).Returns(vehicles);
-
+             
             var busMock = new Mock<IBus>();
             var factoryMock = new Mock<ITravellerFactory>();
             factoryMock.Setup(f => f.CreateBus(20, 2.0M)).Returns(busMock.Object);
@@ -87,4 +87,3 @@ namespace Traveller.UnitTests.Commands.Creating.CreateBusCommandTests
         }
     }
 }
-*/

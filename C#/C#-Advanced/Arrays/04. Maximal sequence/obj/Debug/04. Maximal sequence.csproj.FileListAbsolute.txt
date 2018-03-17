@@ -5,3 +5,10 @@ C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Arrays\04.
 C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Arrays\04. Maximal sequence\obj\Debug\04. Maximal sequence.csproj.CoreCompileInputs.cache
 C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Arrays\04. Maximal sequence\obj\Debug\_04.Maximal_sequence.exe
 C:\Users\IliyaDamyanov\Documents\C-\Telerik Academy Alpha\C#-Advanced\Arrays\04. Maximal sequence\obj\Debug\_04.Maximal_sequence.pdb
+C:\Users\IliyaDamyanov\Documents\Programming\Telerik-Academy-Alpha\C#\C#-Advanced\Arrays\04. Maximal sequence\bin\Debug\_04.Maximal_sequence.exe.config
+C:\Users\IliyaDamyanov\Documents\Programming\Telerik-Academy-Alpha\C#\C#-Advanced\Arrays\04. Maximal sequence\bin\Debug\_04.Maximal_sequence.exe
+C:\Users\IliyaDamyanov\Documents\Programming\Telerik-Academy-Alpha\C#\C#-Advanced\Arrays\04. Maximal sequence\bin\Debug\_04.Maximal_sequence.pdb
+C:\Users\IliyaDamyanov\Documents\Programming\Telerik-Academy-Alpha\C#\C#-Advanced\Arrays\04. Maximal sequence\obj\Debug\04. Maximal sequence.csprojResolveAssemblyReference.cache
+C:\Users\IliyaDamyanov\Documents\Programming\Telerik-Academy-Alpha\C#\C#-Advanced\Arrays\04. Maximal sequence\obj\Debug\04. Maximal sequence.csproj.CoreCompileInputs.cache
+C:\Users\IliyaDamyanov\Documents\Programming\Telerik-Academy-Alpha\C#\C#-Advanced\Arrays\04. Maximal sequence\obj\Debug\_04.Maximal_sequence.exe
+C:\Users\IliyaDamyanov\Documents\Programming\Telerik-Academy-Alpha\C#\C#-Advanced\Arrays\04. Maximal sequence\obj\Debug\_04.Maximal_sequence.pdb

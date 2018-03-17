@@ -28,24 +28,27 @@ namespace Probni
     {
         public static void Main()
         {
-            string exampleString = "Hello Extension Methods";
-            string abc = Method(exampleString);
-            int wordsInString = Method(exampleString).WordCount();
-            Console.WriteLine(wordsInString);
+            Car car = new Car();
+            car.Money = 50;
+            Console.WriteLine(car.Money);
         }
 
-        public static string Method(string str)
-        {
-            return str + " abc";
-        }
     }
 
-    public static class Extensions
+    public class Car
     {
-        public static int WordCount(this string str)
+        private int money;
+
+        public int Money
         {
-            return str.Split(new char[] { ' ', '.', '?' },
-            StringSplitOptions.RemoveEmptyEntries).Length;
+            get
+            {
+                return this.money;
+            }
+            set
+            {
+                this.money = value + 50;
+            }
         }
     }
 }
