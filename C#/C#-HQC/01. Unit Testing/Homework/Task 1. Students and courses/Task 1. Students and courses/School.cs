@@ -21,7 +21,7 @@ namespace Task_1.Students_and_courses
             }
         }
 
-        private void Add(IStudent student)
+        public void Add(IStudent student)
         {
             if (this.schoolStudents.ContainsKey(student.UniqueNumber))
             {
