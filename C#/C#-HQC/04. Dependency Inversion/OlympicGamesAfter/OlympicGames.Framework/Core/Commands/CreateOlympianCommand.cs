@@ -61,7 +61,7 @@ namespace OlympicGames.Core.Commands
 
             var olympian = this.CreatePerson();
 
-            //this.Committee.Olympians.Add(olympian);
+            this.Committee.Olympians.Add(olympian);
 
             return string.Format("Created {0}\n{1}", olympian.GetType().Name, olympian);
         }
