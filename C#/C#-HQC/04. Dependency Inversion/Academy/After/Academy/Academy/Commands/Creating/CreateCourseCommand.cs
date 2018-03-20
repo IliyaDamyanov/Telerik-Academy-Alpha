@@ -8,12 +8,12 @@ namespace Academy.Commands.Creating
     public class CreateCourseCommand : ICommand
     {
         private readonly IAcademyFactory factory;
-        private readonly IEngine engine;
+        private readonly IDatabase database;
 
-        public CreateCourseCommand(IAcademyFactory factory, IEngine engine)
+        public CreateCourseCommand(IAcademyFactory factory, IDatabase database)
         {
             this.factory = factory ?? throw new ArgumentNullException("factory");
-            this.engine = engine ?? throw new ArgumentNullException("engine");
+            this.database = database ?? throw new ArgumentNullException("engine");
         }
 
         public string Execute(IList<string> parameters)

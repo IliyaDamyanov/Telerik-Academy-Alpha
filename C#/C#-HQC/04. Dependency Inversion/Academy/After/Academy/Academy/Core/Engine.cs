@@ -21,18 +21,7 @@ namespace Academy.Core
             this.reader = reader ?? throw new ArgumentNullException("reader");
             this.writer = writer ?? throw new ArgumentNullException("writer");
             this.parser = parser ?? throw new ArgumentNullException("parser");
-
-            this.Seasons = new List<ISeason>();
-            this.Students = new List<IStudent>();
-            this.Trainers = new List<ITrainer>();
         }
-
-        public IList<ISeason> Seasons { get; private set; }
-
-        public IList<IStudent> Students { get; private set; }
-
-        public IList<ITrainer> Trainers { get; private set; }
-
 
         public void Start()
         {

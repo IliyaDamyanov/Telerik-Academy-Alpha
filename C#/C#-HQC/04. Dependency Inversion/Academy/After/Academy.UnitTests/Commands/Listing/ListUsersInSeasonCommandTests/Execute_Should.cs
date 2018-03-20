@@ -16,7 +16,7 @@ namespace Academy.UnitTests.Commands.Listing.ListUsersInSeasonCommandTests
         {
             //Arrange
             var factoryMok = new Mock<IAcademyFactory>();
-            var engineMock = new Mock<IEngine>();
+            var databaseMock = new Mock<IDatabase>();
             var firstSeasonMock = new Mock<ISeason>();
             var secondSeasonMock = new Mock<ISeason>();
             List<ISeason> seasons = new List<ISeason>()
@@ -32,10 +32,10 @@ namespace Academy.UnitTests.Commands.Listing.ListUsersInSeasonCommandTests
 
             string expectedResult = "listing users";
 
-            engineMock.SetupGet(m => m.Seasons).Returns(seasons);
+            databaseMock.SetupGet(m => m.Seasons).Returns(seasons);
             secondSeasonMock.Setup(m => m.ListUsers()).Returns(expectedResult);
 
-            ListUsersInSeasonCommand command = new ListUsersInSeasonCommand(factoryMok.Object, engineMock.Object);
+            ListUsersInSeasonCommand command = new ListUsersInSeasonCommand(factoryMok.Object, databaseMock.Object);
 
             //Act
             var result = command.Execute(parameters);

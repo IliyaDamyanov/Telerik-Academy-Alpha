@@ -25,6 +25,10 @@ namespace Academy.Ninject
             this.Bind<IEngine>().To<Engine>().InSingletonScope();
 
             this.Bind<ICommand>().To<ListCoursesInSeasonCommand>().Named("ListCourseInSeason");
+            this.Bind<ICommand>().To<ListUsersCommand>().Named("ListUsers");
+            this.Bind<ICommand>().To<ListUsersInSeasonCommand>().Named("ListUsersInSeason");
+
+            //this.Bind<ICommand>().To<ListAllDataCommand>().Named("ListAllData").WithConstructorArgument(new List<ICommand>() { })
 
             this.Bind<ICommand>().To<CreateCourseCommand>().Named("CreateCourseInternal");
             this.Bind<ICommand>().To<CreateCourseResultCommand>().Named("CreateCourseResultInternal");

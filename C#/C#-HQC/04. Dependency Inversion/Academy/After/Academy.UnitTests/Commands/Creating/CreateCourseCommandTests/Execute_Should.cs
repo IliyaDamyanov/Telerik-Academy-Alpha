@@ -16,7 +16,7 @@ namespace Academy.UnitTests.Commands.Creating.CreateCourseCommandTests
         {
             //Arrange
             var factoryMock = new Mock<IAcademyFactory>();
-            var engineMock = new Mock<IEngine>();
+            var databaseMock = new Mock<IDatabase>();
             var firstSeasonMock = new Mock<ISeason>();
             var secondSeasonMock = new Mock<ISeason>();
             var courseMock = new Mock<ICourse>();
@@ -29,7 +29,7 @@ namespace Academy.UnitTests.Commands.Creating.CreateCourseCommandTests
             string lecturesPerWeek = "2";
             string startingDate = "2017-01-24";
 
-            engineMock.SetupGet(m => m.Seasons).Returns(seasons);
+            databaseMock.SetupGet(m => m.Seasons).Returns(seasons);
             factoryMock.Setup(m => m.CreateCourse(courseName, lecturesPerWeek, startingDate)).Returns(courseMock.Object);
             secondSeasonMock.SetupGet(m => m.Courses).Returns(courses);
             List<string> parameters = new List<string>()
@@ -40,7 +40,7 @@ namespace Academy.UnitTests.Commands.Creating.CreateCourseCommandTests
                 startingDate
             };
 
-            CreateCourseCommand command = new CreateCourseCommand(factoryMock.Object, engineMock.Object);
+            CreateCourseCommand command = new CreateCourseCommand(factoryMock.Object, databaseMock.Object);
 
             //Act
             command.Execute(parameters);
@@ -55,7 +55,7 @@ namespace Academy.UnitTests.Commands.Creating.CreateCourseCommandTests
         {
             //Arrange
             var factoryMock = new Mock<IAcademyFactory>();
-            var engineMock = new Mock<IEngine>();
+            var databaseMock = new Mock<IDatabase>();
             var firstSeasonMock = new Mock<ISeason>();
             var secondSeasonMock = new Mock<ISeason>();
             var courseMock = new Mock<ICourse>();
@@ -74,7 +74,7 @@ namespace Academy.UnitTests.Commands.Creating.CreateCourseCommandTests
 
             string expectedResult = $"Course with ID 1 was created in Season {seasonId}.";
 
-            engineMock.SetupGet(m => m.Seasons).Returns(seasons);
+            databaseMock.SetupGet(m => m.Seasons).Returns(seasons);
             factoryMock.Setup(m => m.CreateCourse(courseName, lecturesPerWeek, startingDate)).Returns(courseMock.Object);
             secondSeasonMock.SetupGet(m => m.Courses).Returns(courses);
             List<string> parameters = new List<string>()
@@ -85,7 +85,7 @@ namespace Academy.UnitTests.Commands.Creating.CreateCourseCommandTests
                 startingDate
             };
 
-            CreateCourseCommand command = new CreateCourseCommand(factoryMock.Object, engineMock.Object);
+            CreateCourseCommand command = new CreateCourseCommand(factoryMock.Object, databaseMock.Object);
 
             //Act
             var result = command.Execute(parameters);
