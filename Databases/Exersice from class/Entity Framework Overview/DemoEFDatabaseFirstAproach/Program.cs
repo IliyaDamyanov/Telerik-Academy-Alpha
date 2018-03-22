@@ -11,7 +11,17 @@ namespace DemoEFDatabaseFirstAproach
         static void Main(string[] args)
         {
             TelerikAcademyEntities db = new TelerikAcademyEntities();
-            db.Towns.Add(new Town() { Name = "Dimitrovgrad" });
+
+            var employeeToAdd = new Employee()
+            {
+                FirstName = "John",
+                LastName = "Doe",
+                JobTitle = "Sales",
+                DepartmentID = 1,
+                HireDate = DateTime.Now,
+                Salary = 1000
+            };
+            db.Employees.Add(employeeToAdd);
             db.SaveChanges();
         }
     }

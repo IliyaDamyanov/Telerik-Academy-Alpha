@@ -75,6 +75,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyDemoContext.edmx</DependentUpon>
     </Compile>
+    <Compile Include="PartialClasses.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Project.cs">
       <DependentUpon>MyDemoContext.tt</DependentUpon>
