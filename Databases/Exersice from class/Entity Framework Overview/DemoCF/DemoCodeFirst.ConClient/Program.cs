@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DemoCodeFirst.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,16 @@ namespace DemoCodeFirst.ConClient
         static void Main()
         {
             var ctx = new StudentSystemContext();
-            ctx.Students.Count();
+            Mark mark = new Mark()
+            {
+                Score = 6,
+                Description = "Very good",
+                StudentId=1 //dali tuk shte kajem StudentId=1 , ili dolu na studenta shte prisvoim tazi ocenka e vse taq
+                
+            };
+
+            //Student student = ctx.Students.FirstOrDefault(x => x.Id == 1);
+            //student.Marks.Add(mark);
         }
     }
 }

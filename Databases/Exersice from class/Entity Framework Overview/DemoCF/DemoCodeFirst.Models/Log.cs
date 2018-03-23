@@ -10,6 +10,8 @@ namespace DemoCodeFirst.Models
     {
         public int Id { get; set; }
 
-        public int MyProperty { get; set; }
+        public int Data { get; set; }
+
+        ICollection<Student>
     }
 }
