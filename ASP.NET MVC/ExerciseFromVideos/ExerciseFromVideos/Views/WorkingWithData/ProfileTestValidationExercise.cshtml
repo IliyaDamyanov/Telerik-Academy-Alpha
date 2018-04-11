@@ -1,0 +1,11 @@
+﻿@model ExerciseFromVideos.Models.ProfileTestViewModel
+
+@using (Html.BeginForm("ProfileTestValidationExercise"))
+{
+    @Html.EditorForModel()
+    <input type="submit" />
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

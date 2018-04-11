@@ -17,7 +17,7 @@ const modelFactoryFunc = function (){
             get distance(){
                 return distance
             },
-            toString: journeyToString
+            toString: journeyToString 
         }
     }
 

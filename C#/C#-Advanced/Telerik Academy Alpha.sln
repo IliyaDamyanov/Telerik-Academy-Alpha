@@ -788,6 +788,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCodeFirst.Models", "..\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCodeFirst.ConClient", "..\..\Databases\Exersice from class\Entity Framework Overview\DemoCF\DemoCodeFirst.ConClient\DemoCodeFirst.ConClient.csproj", "{6648BFDD-0A36-4A3A-A3E5-16DA6356B727}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NET MVC", "ASP.NET MVC", "{40C53990-0D89-4C9C-832D-79AAAE6B44C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

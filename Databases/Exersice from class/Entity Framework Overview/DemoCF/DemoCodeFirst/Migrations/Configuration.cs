@@ -11,7 +11,7 @@ namespace DemoCodeFirst.Migrations
         public Configuration()
         {
             //this.AutomaticMigrationsEnabled = true;
-            this.AutomaticMigrationDataLossAllowed = true;
+            //this.AutomaticMigrationDataLossAllowed = true;
             ContextKey = "DemoCodeFirst.StudentSystemContext";
         }
 
@@ -21,7 +21,7 @@ namespace DemoCodeFirst.Migrations
             if (!context.Students.Any())
             {
                 context.Students.Add(new Student()
-                {
+                { 
                     FirstName = "Ivan",
                     LastName = "Ivanov"
                 });

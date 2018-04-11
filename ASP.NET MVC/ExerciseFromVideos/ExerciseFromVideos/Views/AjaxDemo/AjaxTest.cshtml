@@ -1,0 +1,55 @@
+﻿<div id="timeDisplay"></div>
+<div id="timeDisplayLoading" hidden="hidden">Loading...</div>
+<h1 id="BigTimeDisplay"></h1>
+@*<a onclick="getServerTime()">Get server time</a>*@
+
+@*<a data-ajax="true"
+   data-ajax-method="GET"
+   data-ajax-mode="replace"
+   data-ajax-update="#timeDisplay"
+   href="/AjaxDemo/ServerTime">
+    Get server time
+</a>*@
+
+@Ajax.ActionLink("Get server time", "ServerTime", //ServerTime , AllBooks
+    new AjaxOptions
+    {
+        UpdateTargetId = "timeDisplay, #BigTimeDisplay", // eto taka stava za 2 elementa
+        LoadingElementId = "timeDisplayLoading",
+        HttpMethod = "GET",
+        InsertionMode = InsertionMode.Replace
+    })
+
+@using (Ajax.BeginForm("Search", //kato ne sme ukazali kontroler, tyrsi metoda v syshtiq kontroler
+                new AjaxOptions
+                {
+                    UpdateTargetId = "results",
+                    InsertionMode = InsertionMode.Replace
+                }))
+{
+    <input id="searchBox" type="text" name="query" />
+    <input type="text" name="query1" />
+    <input type="hidden" name="query2" value="something hidden ID"/>
+    <input type="submit" />
+}
+<div id="results">teksta predi da se replace-ne</div>
+
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryajax");
+<script>
+    $('#searchBox').on('keyup', () => { //taka se filtrira s natiskane na butoncheto
+        $('form').submit();
+    })
+        //vmesto taka slagame koda otgore
+
+        //function getServerTime() {
+        //    $("#timeDisplay").load("/AjaxDemo/ServerTime");
+        //    //its the same
+        //    $.get("/AjaxDemo/ServerTime", (result) => {
+        //        $("#BigTimeDisplay").html(result)
+        //    })
+        //}
+</script>
+    }
+

@@ -1,0 +1,15 @@
+﻿@model string
+    @if (ViewBag.something != null)
+    {
+        <p>
+            @ViewBag.something
+        </p>
+    }
+    else
+    {
+        @:There is nothing in the viewbag.
+    }
+<p>
+    @*<textarea name="FirstName" >@Model</textarea>*@
+    @Model @*tova e za da se pokaje Firstname ot ProfileTestViewModel*@
+</p>
