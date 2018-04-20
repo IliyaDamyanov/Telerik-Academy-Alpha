@@ -1,0 +1,21 @@
+﻿@model AJAXInMVC.Models.ProfileViewModel
+
+@using (Html.BeginForm("EditProfile"))
+{
+    @*<input type="text" name="FirstName" />
+        <input type="number" name="Age" />
+            vmesto taka na ryka da gi izpolzvame , pri polojenie che sme slojili using s daden model , po-dobre kakto otdolu sym go napravil*@
+    @*@Html.EditorFor(m => m.Firstname)
+    @Html.EditorFor(m => m.Age)*@
+    @*@Html.EditorFor(m => m.Age)
+    @Html.EditorFor(m => m.BirthDate)*@
+    //na baza na tipa na property-to EditorFor shte syzdade pravilnoto input pole
+
+    @Html.EditorForModel()
+    <input type="submit" />
+}
+
+@*tozi section ni pozvolqva logikata da se izvyrshva direktno na klienta*@
+@section scripts {
+    @Scripts.Render("~/Scripts/jquery.validate*");
+    }

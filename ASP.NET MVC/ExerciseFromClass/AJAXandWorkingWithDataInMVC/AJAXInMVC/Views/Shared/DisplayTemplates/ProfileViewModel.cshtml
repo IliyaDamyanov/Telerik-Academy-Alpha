@@ -1,0 +1,15 @@
+﻿@model AJAXInMVC.Models.ProfileViewModel
+<div>
+    This is display template for ProfileViewModel
+</div>
+<div>
+    <p>
+        @Html.DisplayFor(m => m.Firstname, new { something = "Iliya" })
+    </p>
+    <div>
+        @Model.Age
+    </div>
+    <div>
+        @Model.BirthDate
+    </div>
+</div>

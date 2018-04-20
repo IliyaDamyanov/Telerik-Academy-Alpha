@@ -1,0 +1,15 @@
+﻿@model string
+
+@if (ViewBag.something != null)
+{
+    <p>
+        @ViewBag.something
+    </p>
+}
+else
+{
+    @: There is nothing in ViewBag
+}
+<p>
+    @Model
+</p>

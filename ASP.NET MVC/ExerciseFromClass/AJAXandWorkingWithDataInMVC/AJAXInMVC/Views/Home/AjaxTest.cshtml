@@ -1,0 +1,52 @@
+﻿<div id="timeDisplay"></div>
+<div id="timeDisplayLoading" hidden="hidden">Loading..</div>
+@*<a onclick="getServerTime()">Get server time</a>*@
+
+@*<a data-ajax="true"
+       data-ajax-method="GET"
+       data-ajax-mode="replace"
+       data-ajax-update="#timeDisplay"
+       href="/Home/ServerTime">
+        Get server time
+    </a> tova e varianta s unobtrusive*@
+
+@Ajax.ActionLink("Get server time", "ServerTime",
+    new AjaxOptions
+    {
+        UpdateTargetId = "timeDisplay",
+        LoadingElementId = "timeDisplayLoading",
+        HttpMethod = "GET",
+        InsertionMode = InsertionMode.Replace
+    })
+
+@using (Ajax.BeginForm("Search",
+    new AjaxOptions
+    {
+        UpdateTargetId = "timeDisplay",
+        InsertionMode = InsertionMode.Replace
+    }))
+{
+    <input id="searchBox" type="text" name="query" />
+    <input type="submit"/>
+}
+
+<div id="results">yuyyuhi</div>
+
+
+
+    @section scripts{
+        @Scripts.Render("~/bundles/jqueryajax")
+<script>
+    $('#searchBox').on('keyup', () => {
+        $('form').submit();
+        //taka samo che se pliushtqt zaqvki na vseki keystroke , no si ima kontrolki deto go pravqt da se fire-va event na nqkolko milisekundi(na nqkolko natisnati butona) i togava se pravi event
+    })
+
+</script>
+        @*<script>
+                function getServerTime() {
+                    $("#timeDisplay").load("/Home/ServerTime")
+                }
+            </script>*@
+        @*ako izpolzvame js.unobtrusive izpolzvame <а> taga s opciite*@
+    }
