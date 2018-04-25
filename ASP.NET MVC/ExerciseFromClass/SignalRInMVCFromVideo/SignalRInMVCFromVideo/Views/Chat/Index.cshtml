@@ -18,7 +18,7 @@
 
         const sendMessageClient = function () {
             const message = $('#messageBox').val()
-            chatHub.server.newMessage(message)
+            chatHub.server.SendMessage(message)
         }
 
         $('#sendButton').click(() => {
